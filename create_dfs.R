@@ -58,3 +58,4 @@ df <- lapply(split_list, function(i){
 df <- do.call(rbind, df)
 write.csv(df, file="mzml_spec.csv", sep = ",",row.names = F)
 write.table(df, file="mzml_spec.tsv", sep = "\t",row.names = F)
+# jsonlite::write_json(jsonlite::toJSON(df,dataframe = "rows"),path = "mzml_spec.json")
